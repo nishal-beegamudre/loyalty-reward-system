@@ -1,0 +1,1016 @@
+{
+	"info": {
+		"_postman_id": "303705a9-098e-4865-895b-c4f60d093b8e",
+		"name": "Loyalty Reward System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18403833"
+	},
+	"item": [
+		{
+			"name": "Admin Service",
+			"item": [
+				{
+					"name": "Generate Admin Secret",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/auth/admin/generateAdminSecret?masterKey=B@guv1x@7599",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"auth",
+								"admin",
+								"generateAdminSecret"
+							],
+							"query": [
+								{
+									"key": "masterKey",
+									"value": "B@guv1x@7599"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Login Sessions by Email ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/admin/getAllLoginSessionsByEmailId?email=nishalb476@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admin",
+								"getAllLoginSessionsByEmailId"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb476@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Signup Sessions by Email ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/admin/getAllSignUpSessionsByEmailId?email=nishalb476@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admin",
+								"getAllSignUpSessionsByEmailId"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb476@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Admin Secret",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/admin/validateAdminSecret/{adminSecret}",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admin",
+								"validateAdminSecret",
+								"{adminSecret}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Gateway",
+			"item": [
+				{
+					"name": "Generate Admin Secret",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/auth/admin/generateAdminSecret?masterKey=B@guv1x@7599",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"auth",
+								"admin",
+								"generateAdminSecret"
+							],
+							"query": [
+								{
+									"key": "masterKey",
+									"value": "B@guv1x@7599"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Login Sessions by Email ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/admin/getAllLoginSessionsByEmailId?email=nishalb476@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"admin",
+								"getAllLoginSessionsByEmailId"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb476@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Signup Sessions by Email ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/getAllSignUpSessionsByEmailId?email=nishalb476@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"getAllSignUpSessionsByEmailId"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb476@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend Email",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/auth/email/resendEmail/nishalb7599@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"auth",
+								"email",
+								"resendEmail",
+								"nishalb7599@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Topup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiZWVnYW11ZHJlQGdtYWlsLmNvbSIsInJvbGVzIjpbIlVTRVIiXSwiaWF0IjoxNzMyMDQ5NTE1LCJleHAiOjE3MzU2NDk1MTV9.rxFBli8qpgcJO05CkUewO-7t9pOvl3QzOFMQsMtKB0E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb1999@gmail.com\",\r\n    \"amount\":3432.34\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/transaction/topup",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"transaction",
+								"topup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjAzNzY0NSwiZXhwIjoxNzM1NjM3NjQ1fQ.TWPrSIp-3UU-0vI93t5ECnu02L2Uux4hnVIxRAQo5YE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb7599@gmail.com\",\r\n    \"amount\":453.34\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/transaction/deduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"transaction",
+								"deduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Passbook",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuaXNoYWxiNzU5OUBnbWFpbC5jb20iLCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTczMjAzODA5MywiZXhwIjoxNzM1NjM4MDkzfQ.vnnoyLsIR1ynDPaWxSXPSm1JF7AmeJ91i_oS5nRPpmY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8083/transaction/passbook?email=nishalb7599@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"transaction",
+								"passbook"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb7599@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Balance by Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"email\":\"nishalb7698@gmail.com\",\r\n    \"password\":\"B@guv1x@7599\",\r\n    \"name\":\"Nish Bee\",\r\n    \"roleId\":\"\",\r\n    \"isActive\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/getBalanceByEmail?email=nishalb476@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"getBalanceByEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb476@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb476@gmail.com\",\r\n    \"password\":\"ABCD@123\",\r\n    \"name\":\"Nishal Beega\",\r\n    \"role\":\"Consultant\",\r\n    \"adminSecret\":\"SFwxJDNlVDMK7kG4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"triphoganabms@gmail.com\",\r\n    \"password\":\"Hello@123\"\r\n   //\"email\":\"adamk\",\r\n   //\"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate OTP",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb476@gmail.com\",\r\n    \"otp\":438732\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/auth/verifyOTP",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"auth",
+								"verifyOTP"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email Service",
+			"item": [
+				{
+					"name": "Send Email",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/email/sendEmail/nishalb1999@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"email",
+								"sendEmail",
+								"nishalb1999@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate OTP",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb1999@gmail.com\",\r\n    \"otp\":156475\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/email/validateOTP",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"email",
+								"validateOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend Email",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/auth/email/resendEmail/nishalb1999@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"auth",
+								"email",
+								"resendEmail",
+								"nishalb1999@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction Service",
+			"item": [
+				{
+					"name": "Topup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb7698@gmail.com\",\r\n    \"amount\":15000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8086/transaction/topup",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"transaction",
+								"topup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb7698@gmail.com\",\r\n    \"amount\":15100.035\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8086/transaction/deduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"transaction",
+								"deduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Passbook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8086/transaction/passbook?email=nishalb7698@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"transaction",
+								"passbook"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb7698@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Service",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb476@gmail.com\",\r\n    \"password\":\"Hello@1234\",\r\n    \"name\":\"Nishal Beegamudreas\",\r\n    \"roleId\":\"RL17319511128100000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/createUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"id\":\"\",\r\n    \"email\":\"nishalb476@gmail.com\",\r\n    //\"password\":\"B@guv1x@7599\",\r\n    \"name\":\"Nish Bee\",\r\n    //\"roleId\":\"\",\r\n    \"isValidated\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/updateUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"email\":\"nishalb7698@gmail.com\",\r\n    \"password\":\"B@guv1x@7599\",\r\n    \"name\":\"Nish Bee\",\r\n    \"roleId\":\"\",\r\n    \"isActive\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/getUserByEmail?email=nishalb7698@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"getUserByEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb7698@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Balance by Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"email\":\"nishalb7698@gmail.com\",\r\n    \"password\":\"B@guv1x@7599\",\r\n    \"name\":\"Nish Bee\",\r\n    \"roleId\":\"\",\r\n    \"isActive\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/getBalanceByEmail?email=nishalb7698@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"getBalanceByEmail"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb7698@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"email\":\"nishalb7698@gmail.com\",\r\n    \"password\":\"B@guv1x@7599\",\r\n    \"name\":\"Nish Bee\",\r\n    \"roleId\":\"\",\r\n    \"isActive\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/getAllUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Balance",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nishalb476@gmail.com\",\r\n    \"balance\":464.353\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/updateBalance",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"updateBalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"\",\r\n    \"email\":\"nishalb7698@gmail.com\",\r\n    \"password\":\"B@guv1x@7599\",\r\n    \"name\":\"Nish Bee\",\r\n    \"roleId\":\"\",\r\n    \"isActive\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/deleteUser?email=nishalb476@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"deleteUser"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nishalb476@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Users by IDs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"USER17319513683630000000001\",\"USER17319526775250000000001\"]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/findAllById",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"findAllById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Balance in Bulk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"id\":\"USER17319513683630000000001\",\r\n    \"balance\":100.035\r\n},{\r\n    \"id\":\"USER17319526775250000000001\",\r\n    \"balance\":235.64\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/updateBalanceInBulk",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"updateBalanceInBulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Analyst\",\r\n    \"isAdmin\":true,\r\n    \"isSuperAdmin\":false,\r\n    \"isCustomerUser\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/createRole",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"createRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/deleteRole?name=Analyst",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"deleteRole"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Analyst"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role by Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8087/user/getRoleByName?name=Consultant",
+							"host": [
+								"localhost"
+							],
+							"port": "8087",
+							"path": [
+								"user",
+								"getRoleByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Consultant"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
