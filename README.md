@@ -25,7 +25,6 @@ This is the implementation of online wallet payment system where topup and deduc
 * Synchronous communication between microservices - Feign Client 
 * Messaging platform - Apache Kafka
 * API Requests routing - Spring cloud gateway & Eureka service Registry
-* Unit tests and integration tests - JUnit & Mockito
 * Logging framework - ELK logging (Elastic, LogStash, Kibana)
 * Email - Email service with OTP implementation
 * Database - MySQL (separate databases for each microservice)
@@ -71,7 +70,7 @@ This is the implementation of online wallet payment system where topup and deduc
 
     2. Clone this repository.
 
-    3. Pre-requisites to run this project: Java 17, Eclipse IDE, Postman, MySQL workbench, ElasticSearch, LogStash, Kibana, Apache Kafka, Ubuntu, Redis server
+    3. Pre-requisites to run this project: Java 17, Eclipse IDE, Postman, MySQL workbench, ElasticSearch, LogStash, Kibana, Apache Kafka, Filebeats, Ubuntu, Redis server
 
     4. Windows subsystem for Linux should be enabled.
 
