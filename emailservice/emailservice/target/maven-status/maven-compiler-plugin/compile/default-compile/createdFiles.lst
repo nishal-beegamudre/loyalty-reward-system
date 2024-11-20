@@ -1,0 +1,4 @@
+com\emailservice\EmailserviceApplication.class
+com\emailservice\sender\EmailService.class
+com\emailservice\config\MailConfig.class
+com\emailservice\sender\EmailController.class
